@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Simple.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Simple.Web.API", "src\CQRS.Simple.Web.API\CQRS.Simple.Web.API.csproj", "{6F695BE5-3DBC-4038-B844-C11A7934EF19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Simple.Components", "src\CQRS.Simple.Components\CQRS.Simple.Components.csproj", "{6D54B5DF-422C-4F33-ACA8-D21B5E454327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{6F695BE5-3DBC-4038-B844-C11A7934EF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F695BE5-3DBC-4038-B844-C11A7934EF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F695BE5-3DBC-4038-B844-C11A7934EF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D54B5DF-422C-4F33-ACA8-D21B5E454327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D54B5DF-422C-4F33-ACA8-D21B5E454327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D54B5DF-422C-4F33-ACA8-D21B5E454327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D54B5DF-422C-4F33-ACA8-D21B5E454327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
