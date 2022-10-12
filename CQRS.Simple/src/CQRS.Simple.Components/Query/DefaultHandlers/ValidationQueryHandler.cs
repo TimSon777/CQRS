@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
 
-namespace CQRS.Simple.Components;
+namespace CQRS.Simple.Components.Query.DefaultHandlers;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-public class QueryValidator<TQuery, TResult> : IQueryHandler<TQuery, TResult>
+public class ValidatorQueryHandler<TQuery, TResult> : IQueryHandler<TQuery, TResult>
     where TQuery : IQuery<TResult>
 {
     private readonly IValidator<TQuery> _validator;
     private readonly IQueryHandler<TQuery, TResult> _decorated;
 
-    public QueryValidator(IValidator<TQuery> validator, IQueryHandler<TQuery, TResult> decorated)
+    public ValidatorQueryHandler(IValidator<TQuery> validator, IQueryHandler<TQuery, TResult> decorated)
     {
         _validator = validator;
         _decorated = decorated;

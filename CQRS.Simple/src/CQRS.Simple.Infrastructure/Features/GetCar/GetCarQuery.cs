@@ -1,8 +1,8 @@
-﻿using CQRS.Simple.Components;
+﻿using CQRS.Simple.Components.Query;
 
 namespace CQRS.Simple.Infrastructure.Features.GetCar;
 
 public class GetCarQuery : IQuery<GetCarResult>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 }

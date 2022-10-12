@@ -9,8 +9,10 @@ public class Configurator : QueryConfigurator
     {
         QueryBuilder<GetCarQuery, GetCarResult>
             .Create(services)
-            .AddQuery<QueryHandler>()
+            .AddQuery<CachingQueryHandler>()
+            .AddQuery<SecurityQueryHandler>()
             .AddQueryValidator()
+            .AddQueryExceptionsHandler()
             .Build();
         
         return services;

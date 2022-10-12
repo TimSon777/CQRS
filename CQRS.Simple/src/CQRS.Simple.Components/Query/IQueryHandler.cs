@@ -1,4 +1,4 @@
-﻿namespace CQRS.Simple.Components;
+﻿namespace CQRS.Simple.Components.Query;
 
 public interface IQueryHandler<in TQuery, TResult>
     where TQuery : IQuery<TResult>

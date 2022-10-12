@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using CQRS.Simple.Components;
+using CQRS.Simple.Components.Query;
 using Microsoft.Extensions.Configuration;
-
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -19,6 +19,7 @@ public static class ServicesConfiguration
             .AddCarFactory()
             .AddValidators()
             .AddQueries(assemblies)
+            .AddCommands(assemblies)
             .AddRedis(configuration);
         
         return services;

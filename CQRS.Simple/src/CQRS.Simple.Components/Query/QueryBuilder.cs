@@ -1,4 +1,4 @@
-﻿using CQRS.Simple.Components;
+﻿using CQRS.Simple.Components.Query;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection;
@@ -28,12 +28,6 @@ public class QueryBuilder<TQuery, TResult>
         return this;
     }
 
-    public QueryBuilder<TQuery, TResult> AddQueryValidator()
-    {
-        _queries.Add(Register<QueryValidator<TQuery, TResult>>);
-        return this;
-    }
-
     public IServiceCollection Build()
     {
         foreach (var query in _queries)
@@ -50,7 +44,7 @@ public class QueryBuilder<TQuery, TResult>
         if (_isFirstDecorator)
         {
             _isFirstDecorator = false;
-            _services.AddSingleton<IQueryHandler<TQuery, TResult>, TQueryHandler>();
+            _services.AddScoped<IQueryHandler<TQuery, TResult>, TQueryHandler>();
         }
         else
         {

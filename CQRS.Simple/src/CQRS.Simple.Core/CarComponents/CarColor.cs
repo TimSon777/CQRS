@@ -8,5 +8,4 @@ public enum CarColor
     Black = 3,
     Grey  = 4,
     White = 5,
-    All = Red | Green | Black | Grey | White
 }

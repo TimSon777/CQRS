@@ -13,6 +13,8 @@ public class LadaGranta : LadaBase
 
     public override IEnumerable<CarColor> Colors => new[]
     {
-        CarColor.All
+        CarColor.White,
+        CarColor.Green,
+        CarColor.Red
     };
 }

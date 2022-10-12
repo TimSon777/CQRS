@@ -10,8 +10,10 @@ public static class WebApplicationConfiguration
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-
-        app.UseHttpsRedirection();
+        
+        app
+            .UseHttpsRedirection()
+            .UseHttpRequestExceptionsHandler();
 
         app.MapControllers();
 
